@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Facturación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            width: 100%;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #e4e4f4;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .header img {
+            max-height: 50px;
+        }
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-row .form-group {
+            flex: 1;
+            margin-right: 10px;
+        }
+        .form-row .form-group:last-child {
+            margin-right: 0;
+        }
+        .submit-btn {
+            display: inline-block;
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+        .add-article-btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .add-article-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <img src="https://via.placeholder.com/50" alt="Logo">
+            <h1>Facturación</h1>
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="from">De:</label>
+                <input type="text" id="from" name="from" placeholder="Quién envía esta factura" required>
+            </div>
+            <div class="form-group">
+                <label for="to">Cobrar a:</label>
+                <input type="text" id="to" name="to" placeholder="Para quién es la factura" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Enviar a:</label>
+                <input type="email" id="email" name="email" placeholder="Enviar correo (opcional)">
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="invoice-number">Número de factura</label>
+                    <input type="text" id="invoice-number" name="invoice-number" placeholder="Número de factura">
+                </div>
+                <div class="form-group">
+                    <label for="date">Fecha</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="due-date">Fecha de vencimiento</label>
+                    <input type="date" id="due-date" name="due-date" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="payment-terms">Condiciones de pago</label>
+                <input type="text" id="payment-terms" name="payment-terms" placeholder="Condiciones de pago">
+            </div>
+            <div class="form-group">
+                <label for="article">Artículo</label>
+                <input type="text" id="article" name="article" placeholder="Descripción del servicio o producto">
+                <button type="button" class="add-article-btn">Añadir artículo</button>
+            </div>
+            <div class="form-group">
+                <label for="notes">Notas</label>
+                <textarea id="notes" name="notes" rows="4" placeholder="Notas adicionales"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Enviar</button>
+        </form>
+    </div>
+
+</body>
+</html>
